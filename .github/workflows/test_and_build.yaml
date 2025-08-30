@@ -6,6 +6,7 @@ on: # Defining the actions which will be executed the Action
 
 permissions: # Which permissions need to have the Action?
   contents: read
+  packages: write
 
 jobs: # Main job that have to execute this CI/CD
   
