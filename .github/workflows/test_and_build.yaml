@@ -1,0 +1,28 @@
+name: Test and Build # Workflow/Action name
+
+on: # Defining the actions which will be executed the Action
+  push: 
+    branches: [ "main" ] # When push on main branch
+
+permissions: # Which permissions need to have the Action?
+  contents: read
+
+jobs: # Main job that have to execute this CI/CD
+  
+  test_and_build: # Describe in which machine will be executed this Workflow
+    runs-on: ubuntu-latest
+
+    steps: # Steps that has to follow the job
+    - uses: actions/checkout@v4 # Take the code of the branch 
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3 # Install Python
+      with:
+        python-version: "3.12" # Defining Python version
+    
+    - name: Install dependencies
+      run: pip install -r src/requirements.txt
+    
+    - name: Test with pytest
+      working-directory: src
+      run: pytest test.py

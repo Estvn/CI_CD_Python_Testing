@@ -1,0 +1,23 @@
+@"
+# Entornos virtuales
+gha-venv/
+venv/
+.env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Archivos de entorno
+.env
+.env.local
+.env.production
+
+# Otros
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding UTF8 .gitignore
