@@ -26,3 +26,8 @@ jobs: # Main job that have to execute this CI/CD
     - name: Test with pytest
       working-directory: src
       run: pytest tests.py
+
+    - name: Check with Linting ruff
+      working-directory: src
+      run: ruff check .
+
