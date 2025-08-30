@@ -25,4 +25,4 @@ jobs: # Main job that have to execute this CI/CD
     
     - name: Test with pytest
       working-directory: src
-      run: pytest test.py
+      run: pytest tests.py
