@@ -2,7 +2,7 @@ name: Test and Build # Workflow/Action name
 
 on: # Defining the actions which will be executed the Action
   push: 
-    branches: [ "main" ] # When push on main branch
+    branches: [ "master" ] # When push on main branch
 
 permissions: # Which permissions need to have the Action?
   contents: read
